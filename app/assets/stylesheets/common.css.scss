@@ -1,0 +1,25 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// common
+
+h2 {
+  margin: 0px;
+}
+
+#sider {
+  margin-right: 20px;
+  float: right;
+
+  p, li{
+    text-align: right;
+  }
+}
+
+.page_wrapper {
+  margin-top: 70px;
+}
+
+.list {
+  border-bottom: 1px solid #cccccc;
+}
