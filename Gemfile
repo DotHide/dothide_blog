@@ -40,6 +40,7 @@ gem 'acts_as_votable', '~> 0.10.0'
 # 生产时必要的
 group :production do
   gem 'unicorn', '~> 4.8.3'
+  gem 'mysql2'
 end
 
 # 部署时必要的
