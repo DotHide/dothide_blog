@@ -1,6 +1,6 @@
 <% @posts.each do |post| %>
   <div class="row list">
-    <h2><%= link_to post.title, post %></h2>
+    <h2><%= link_to post.title, post %> <small>by <%= post.user.name %></small> </h2>
     <p>Submitted <%= time_ago_in_words(post.created_at) %> Ago</p>
   </div>
 <% end %>
