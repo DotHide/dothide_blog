@@ -37,6 +37,14 @@ gem 'devise', '~> 3.4.1'
 gem 'high_voltage', '~> 2.2.1'
 gem 'acts_as_votable', '~> 0.10.0'
 
+# 生产时必要的
+group :production do
+  gem 'unicorn', '~> 4.8.3'
+end
+
+# 部署时必要的
+gem 'mina', '~> 0.3.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
