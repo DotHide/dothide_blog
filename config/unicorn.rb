@@ -7,7 +7,7 @@ pid "#{app_path}/tmp/pids/unicorn.pid"
 stderr_path "#{app_path}/log/unicornerr.log"
 stdout_path "#{app_path}/log/unicornout.log"
 
-listen 5000, :tcp_nopush => false
+listen 5001, :tcp_nopush => false
 
 # 这里设置监听地址，将与nginx配置关联
 listen "/tmp/unicorn.dothide_blog.sock"
