@@ -1,10 +1,12 @@
 <% @posts.each do |post| %>
   <div class="row list">
     <h2><%= link_to post.title, post %> <small>by <%= post.user.name %></small></h2>
-    <p>Submitted <strong><%= time_ago_in_words(post.created_at) %> ago</strong>
-      <small class="pull-right">
-        <span class="text-primary"><i class="glyphicon glyphicon-comment"></i> <%= post.comments.count %></span> 
-      </small> 
-    </p>
+    <div>Submitted <strong><%= time_ago_in_words(post.created_at) %> ago</strong>
+        <ul class="list-inline pull-right">
+          <li><span class="text-primary"><i class="glyphicon glyphicon-comment"></i> <%= post.comments.count %></span></li>
+          <li><span class="text-success"><i class="glyphicon glyphicon-thumbs-up"></i> <%= post.get_upvotes.size %> </span></li>
+          <li><span class="text-danger"><i class="glyphicon glyphicon-thumbs-down"></i> <%= post.get_downvotes.size %> </span></li>
+        </ul>
+    </div>
   </div>
 <% end %>

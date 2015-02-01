@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts do
     resources :comments
+    member do
+      put 'like',     to: 'posts#upvote'
+      put 'dislike',  to: 'posts#downvote'
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
