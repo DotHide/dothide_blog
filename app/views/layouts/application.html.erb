@@ -26,19 +26,26 @@
     </div>
     <div class="col-sm-9">
       <div class="header">
-        <p class="pull-right">
-          <% if user_signed_in?%>
-            <% if current_user.owner %>
-              <%= link_to 'New Post', new_post_path, { class: 'btn btn-sm btn-primary' } %> 
+        <div class="row">
+          <p class="pull-left">
+            <%= link_to posts_path, { class: 'btn btn-sm btn-default' } do %>
+              DotHide's Blog <strong class="text-success">offical</strong>
             <% end -%>
-            <%= link_to 'Log out', destroy_user_session_path,  { :method => :delete, class: 'btn btn-sm btn-default' } %>
-          <% else %>
-            <%= link_to 'Sign up', new_user_registration_path, { class: 'btn btn-sm btn-default' } %>
-            <%= link_to 'Sign in', new_user_session_path, { class: 'btn btn-sm btn-default' } %>
-          <% end -%>
-        </p>
+          </p>
+          <p class="pull-right">
+            <% if user_signed_in?%>
+              <% if current_user.owner %>
+                <%= link_to 'New Post', new_post_path, { class: 'btn btn-sm btn-primary' } %> 
+              <% end -%>
+              <%= link_to 'Log out', destroy_user_session_path,  { :method => :delete, class: 'btn btn-sm btn-default' } %>
+            <% else %>
+              <%= link_to 'Sign up', new_user_registration_path, { class: 'btn btn-sm btn-default' } %>
+              <%= link_to 'Sign in', new_user_session_path, { class: 'btn btn-sm btn-default' } %>
+            <% end -%>
+          </p>
+        </div>
       </div>
-      <div class="page_wrapper">
+      <div class="content-wrapper">
         <% flash.each do |name, msg| %>
           <%= content_tag(:div, msg, class: "alert alert-info") %>
         <% end %>

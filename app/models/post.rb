@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
   validates :body, presence: true # 文章内容不能为空
 
   belongs_to :user
+  has_many :comments
 end

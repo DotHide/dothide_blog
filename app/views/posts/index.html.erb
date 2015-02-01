@@ -1,6 +1,10 @@
 <% @posts.each do |post| %>
   <div class="row list">
-    <h2><%= link_to post.title, post %> <small>by <%= post.user.name %></small> </h2>
-    <p>Submitted <%= time_ago_in_words(post.created_at) %> Ago</p>
+    <h2><%= link_to post.title, post %> <small>by <%= post.user.name %></small></h2>
+    <p>Submitted <strong><%= time_ago_in_words(post.created_at) %> ago</strong>
+      <small class="pull-right">
+        <span class="text-primary"><i class="glyphicon glyphicon-comment"></i> <%= post.comments.count %></span> 
+      </small> 
+    </p>
   </div>
 <% end %>
