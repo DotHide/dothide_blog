@@ -88,7 +88,7 @@ namespace :unicorn do
     bundle exec unicorn_rails -c #{app_path}/config/unicorn.rb -E #{rails_env} -D
   }
   set :stop_unicorn, %{
-    test -s "#{unicorn_pid}" && kill -QUIT `cat "#{unicorn_pid}"` && echo "Stop Ok" && exit 0
+    /etc/init.d/unicorn.dothide_blog stop && echo "Stop Ok" && exit 0
     echo >&2 "Not running"
   }
 
