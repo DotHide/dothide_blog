@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>DotHide's Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -28,7 +28,7 @@
       <div class="header">
         <div class="row">
           <p class="pull-left">
-            <%= link_to posts_path, { class: 'btn btn-sm btn-default' } do %>
+            <%= link_to root_path, { class: 'btn btn-sm btn-default' } do %>
               DotHide's Blog <strong class="text-success">offical</strong>
             <% end -%>
           </p>
