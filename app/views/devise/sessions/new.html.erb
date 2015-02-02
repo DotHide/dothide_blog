@@ -1,5 +1,5 @@
 <h2>Log in</h2>
-<br>
+<hr>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group">
     <%= f.label :email %><br />
@@ -20,5 +20,6 @@
 
   <div class="form-group">
     <%= f.submit "Log in", { class: 'btn btn-sm btn-primary' } %>
+    <%= link_to 'Sign up', new_user_registration_path, { class: 'btn btn-sm btn-default' } %>
   </div>
 <% end %>
