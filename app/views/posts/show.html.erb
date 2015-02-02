@@ -15,6 +15,12 @@
         </span>
       <% end -%>
     </div>
+    <% if current_user.owner %>
+      <div class="btn-group">
+        <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-sm btn-default' %>
+        <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Sure?' }, class: 'btn btn-sm btn-danger' %>
+      </div>
+    <% end -%>
   </p>
   <hr>
   <h3>
