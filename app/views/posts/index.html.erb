@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
   <div class="row list">
-    <h2><%= link_to post.title, post %> <small>by <%= post.user.name %></small></h2>
-    <div>Submitted <strong><%= time_ago_in_words(post.created_at) %> ago</strong>
+    <h2><%= link_to post.title, post %></h2>
+    <div>by<strong> <%= post.user.name %></strong> | <small>Submitted <strong><%= time_ago_in_words(post.created_at) %> ago</strong></small>
         <ul class="list-inline pull-right">
           <li><span class="text-primary"><i class="glyphicon glyphicon-comment"></i> <%= post.comments.count %></span></li>
           <li><span class="text-success"><i class="glyphicon glyphicon-thumbs-up"></i> <%= post.get_upvotes.size %> </span></li>

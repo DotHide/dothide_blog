@@ -36,6 +36,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'devise', '~> 3.4.1'
 gem 'high_voltage', '~> 2.2.1'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'tinymce-rails', '~> 4.1.6'
 
 # 生产时必要的
 group :production do
