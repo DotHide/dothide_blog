@@ -1,42 +1,47 @@
-<h2>About Me</h2>
-<br>
-<div class="row">
-  <div class="col-sm-3">
-    <%= image_tag 'face.png', width: '80%', class: 'img-rounded' %>
+<div id="about_me">
+  <h2>About Me</h2>
+  <div class="row">
+    <div class="col-sm-3">
+      <%= image_tag 'face.png', width: '80%', class: 'img-rounded' %>
+    </div>
+    <div class="col-sm-9">
+      <h3>Hey, I'm DotHide（张宁福）</h3>
+      <p>Welcome to my blog</p>
+      <p>I'm <strong><%= Time.new.year - 1987 %></strong> years old.</p>
+      <p>I'm from <strong>Shanghai · China</strong></p>
+    </div>
   </div>
-  <div class="col-sm-9">
-    <h3>Hey, I'm DotHide（张宁福）</h3>
-    <p>Welcome to my blog</p>
-    <p>I'm <strong><%= Time.new.year - 1987 %></strong> years old.</p>
-    <p>I'm from <strong>Shanghai · China</strong></p>
-    <hr>
-    <h4>Skills</h4>
-    <ul>
-      <li>Over 5 years develop experience</li>
-      <li>Be proficient in development under Mac OS X and Linux.</li>
-      <li>3 years experience in C# / Winform</li>
-      <li>1 year experience in Sencha Touch</li>
-      <li>2 years experience in Ruby on Rails</li>
-      <li>1 year experience in Objective-C</li>
-      <li>Be good at MySQL, MongoDB</li>
-      <li>Be good at Git</li>
-      <li>Be good at HTML / CSS / Javascript / SASS</li>
-      <li>Use Sublime Text II / VIM</li>
-      <li>Several experience in Photoshop</li>
-    </ul>
-    <br>
-    <h4>Experiences</h4>
-    <ul>
-      <li>2015 | Join to Wink Digital Co Under SMW Group</li>
-      <li>2014 | Create ACME platform</li>
-      <li>2014 | Create more than 7 products in digital marketing</li>
-      <li>2014 | Create ECMP platform</li>
-      <li>2014 | Be Product Manager in SMW Group </li>
-      <li>2013 | Create mobile nursing app by Sencha Touch</li>
-      <li>2013 | Manage and deploy more than 20 hospital's mobile nursing application</li>
-      <li>2011 | Join to KingYee</li>
-      <li>2010 | Get the best award in software during my collage</li>
-    </ul>
-    <br>
+  <hr>
+  <div class="row">
+    <div class="col-sm-6">
+      <h4>Skills</h4>
+      <ul class="normal-list">
+        <li>Over 5 years develop experience</li>
+        <li>Be proficient in development under Mac OS X and Linux.</li>
+        <li>3 years experience in C# / Winform</li>
+        <li>1 year experience in Sencha Touch</li>
+        <li>2 years experience in Ruby on Rails</li>
+        <li>1 year experience in Objective-C</li>
+        <li>Be good at MySQL, MongoDB</li>
+        <li>Be good at Git</li>
+        <li>Be good at HTML / CSS / Javascript / Sass</li>
+        <li>Use Sublime Text II / VIM</li>
+        <li>Several experience in Photoshop</li>
+      </ul>
+    </div>
+    <div class="col-sm-6">
+      <h4>Experiences</h4>
+      <ul class="normal-list">
+        <li>2015 | Join to Wink Digital Co Under SMW Group</li>
+        <li>2014 | Create ACME platform</li>
+        <li>2014 | Create more than 7 products in digital marketing</li>
+        <li>2014 | Create ECMP platform</li>
+        <li>2014 | Be Product Manager in SMW Group </li>
+        <li>2013 | Create mobile nursing app by Sencha Touch</li>
+        <li>2013 | Manage and deploy more than 20 hospital's mobile nursing application</li>
+        <li>2011 | Join to KingYee</li>
+        <li>2010 | Get the best award in software during my collage</li>
+      </ul>
+    </div>
   </div>
 </div>

@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="row">
+    <p class="pull-left">
+      <%= link_to root_path, { class: 'btn btn-sm btn-default' } do %>
+      DotHide's Blog <strong class="text-success">offical</strong>
+      <% end -%>
+    </p>
+    <p class="pull-right">
+      <% if user_signed_in?%>
+      <%= link_to edit_user_registration_path(current_user), class: 'btn btn-sm btn-primary' do %>
+      Hi, <strong><%= current_user.name %>!</strong> 
+      <% end -%>
+      <% if current_user.owner %>
+      <%= link_to 'New Post', new_post_path, { class: 'btn btn-sm btn-primary' } %> 
+      <% end -%>
+      <%= link_to 'Log out', destroy_user_session_path,  { :method => :delete, class: 'btn btn-sm btn-default' } %>
+      <% else %>
+      <%= link_to 'Sign up', new_user_registration_path, { class: 'btn btn-sm btn-default' } %>
+      <%= link_to 'Sign in', new_user_session_path, { class: 'btn btn-sm btn-default' } %>
+      <% end -%>
+    </p>
+  </div>
+</div>
